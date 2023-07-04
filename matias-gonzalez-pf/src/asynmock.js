@@ -4,35 +4,40 @@ const misProductos = [
         nombre: 'VODKA ABSOLUT',
         precio: 5500,
         img: '../src/assets/images/vodka.jpg',
-        idCategoria: "1"
+        idCategoria: "1",
+        stock : 10
     },
     {
         id: "2",
         nombre: 'CHANDON DELICE',
         precio: 2200,
         img: '../src/assets/images/espumantes2.jpg',
-        idCategoria: "2"
+        idCategoria: "2",
+        stock : 5
     },
     {
         id: "3",
         nombre: 'GIN BEEFEATER',
         precio: 5500,
         img: '../src/assets/images/gin.jpg',
-        idCategoria: "3"
+        idCategoria: "3",
+        stock : 15
     },
     {
         id: "4",
         nombre: 'CERVEZAS',
         precio: 5500,
         img: '../src/assets/images/cerveza2.jpg',
-        idCategoria: "4"
+        idCategoria: "4",
+        stock : 2
     },
     {
         id: "5",
         nombre: 'WHISKY',
         precio: 5500,
         img: '../src/assets/images/jack.jpeg',
-        idCategoria: "5"
+        idCategoria: "5",
+        stock : 7
     },
 
 ]

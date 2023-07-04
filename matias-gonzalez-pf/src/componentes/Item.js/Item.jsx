@@ -2,6 +2,7 @@ import React from 'react'
 import './Item.css'
 import { Button, Card, Container, Row, Col } from 'react-bootstrap';
 import ListGroup from 'react-bootstrap/ListGroup';
+import { Link } from 'react-router-dom';
 const Item = ({ id, nombre, precio, img }) => {
     return (
         <Card bg="dark" text="light" className='border-0'>
@@ -12,7 +13,7 @@ const Item = ({ id, nombre, precio, img }) => {
                     <ListGroup.Item className='card__list' >Precio : {precio} </ListGroup.Item>
                     <ListGroup.Item className='card__list'>ID : {id}</ListGroup.Item>
                 </ListGroup>
-                <Button variant="light">+ Info</Button>
+                <Button as= {Link} to = {`/item/${id}`}variant="light">+ Info</Button>
             </Card.Body>
         </Card>
     )

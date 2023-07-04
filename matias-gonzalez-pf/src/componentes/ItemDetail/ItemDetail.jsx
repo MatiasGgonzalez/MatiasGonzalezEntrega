@@ -1,8 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Button, Card, Container, Row, Col } from 'react-bootstrap';
 import ListGroup from 'react-bootstrap/ListGroup';
+import ItemCount from '../ItemCount/ItemCount';
+import { Link } from 'react-router-dom';
 
-const ItemDetail = ({ id, nombre, precio, img }) => {
+const ItemDetail = ({ id, nombre, precio, img,  stock }) => {
+    const [agregarCantidad, setAgregarCantidad] = useState(0)
+
+    const manejadorCantidad = (cantidad)=>{
+        setAgregarCantidad(cantidad)
+        console.log(`productos agregados : ${cantidad}`)
+    }
     return (
         <>
             <Container>
@@ -14,7 +22,12 @@ const ItemDetail = ({ id, nombre, precio, img }) => {
                             <ListGroup.Item className='card__list' >Precio : {precio} </ListGroup.Item>
                             <ListGroup.Item className='card__list'>ID : {id}</ListGroup.Item>
                         </ListGroup>
-                        <Button variant="light">+ Info</Button>
+                        {
+
+                        }
+                        {
+                            agregarCantidad > 0 ? (<Link to = "/cart">Terminar compra</Link>) :  (<ItemCount valorInicial={1} stock={stock} funcionAgregar={manejadorCantidad}/>)
+                        }
                     </Card.Body>
                 </Card>
             </Container>
