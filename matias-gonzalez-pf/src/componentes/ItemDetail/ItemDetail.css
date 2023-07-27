@@ -1,0 +1,22 @@
+.imgDetail{
+    width: 200px;
+    height: 200px;
+    border-radius: 7px;
+}
+
+.contenedorCart{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardTitle{
+    margin-top: 10px;
+}
+
+
+.titleItem{
+    margin-top: 15px;
+}
